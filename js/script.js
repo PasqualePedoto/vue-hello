@@ -3,6 +3,6 @@ const root = new Vue({
     el: '#root',
     data: {
         nome: 'cavallo',
-        image: '',
+        image: 'img/aot.jpeg',
     }
 });
