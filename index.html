@@ -17,15 +17,40 @@
     <link rel="stylesheet" href="css/style.css">
 
     <!-- VueJS -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.4/dist/vue.js"></script>
 
     <title>Document</title>
 </head>
 
 <body>
     <div id="root">
-        <p v-text="nome"></p>
-        <img v-bind:src="image" alt="" class="img-fluid">
+        <!-- # Al click del bottone stampo la presebtazione -->
+        <!-- @ <button v-on:click="presentation" class="btn btn-primary">Premi!</button> -->
+
+        <!--  # In questo modo chiamo una funzione utilizzando la direttiva 'v-text' -->
+        <!-- @ <p v-text="presentation()"></p> -->
+
+        <!--  # In questo modo chiamo una funzione utilizzando la mustacchi sintax 'v-text' -->
+        <!-- @ <p>{{presentation()}}</p> -->
+
+        <!-- # Usiamo la direttiva v-bind che serve a far variare dinamicamente gli attributi dei tag -->
+        <!-- @ <p v-bind:class="myClass">Ciao</p> -->
+
+        <!-- # Creiamo un toggle facendo variare la property myClass al click del bottone -->
+        <!-- @ <button v-on:click="toggleColor" class="btn btn-primary">Premi!</button>
+        @ <p v-bind:class="paragraphColor">Ciao</p> -->
+
+        <input type="text" class="rounded-2" v-model='firstName' placeholder="Scrivi il tuo nome">
+        <p v-text="firstName"></p>
+        <input type="text" class="rounded-2" v-model='lastName' placeholder="Scrivi il tuo cognome">
+        <p v-text="lastName"></p>
+        <input type="number" class="rounded-2" v-model='age' placeholder="Scrivi la tua età">
+        <p v-text="age"></p>
+        <input type="text" class="rounded-2" v-model='cityOfBirth' placeholder="Scrivi la città dove sei nato">
+        <p v-text="cityOfBirth"></p>
+
+
+
     </div>
     <script src="js/script.js"></script>
 </body>
